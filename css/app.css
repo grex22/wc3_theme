@@ -115,7 +115,8 @@ h3, h4, h5, h6 {
  * Hide default border to remove 1px line.
  */
 .navbar-fixed-top {
-  border: 0; }
+  border: 0;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.8); }
 
 .navbar-inverse {
   background: #0b578d; }
@@ -332,6 +333,9 @@ li.pagecontrol span, li.pagecontrol:hover span {
     padding-left: 40px; } }
 .main .page-header {
   margin-top: 0; }
+
+i.fa-life-saver:before {
+  color: #D43636; }
 
 .content_widget {
   border: 1px solid #ddd;
