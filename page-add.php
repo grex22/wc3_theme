@@ -59,7 +59,8 @@
                         <label><i class="fa fa-warning"></i> 3 Pending Approvals</label><br>
                         <button class="btn btn-block">View Pending Approvals...</button>
                         <hr>
-                        <button class="btn btn-primary btn-block">Save Changes</button>
+                        <button class="btn btn-secondary btn-block"><i class="fa fa-eye"></i> Preview Page...</button>
+                        <button class="btn btn-primary btn-block"><i class="fa fa-check"></i> Save Changes</button>
                       </div>
                     </div>
                   </div>
