@@ -333,6 +333,9 @@ li.pagecontrol span, li.pagecontrol:hover span {
 .main .page-header {
   margin-top: 0; }
 
+i.fa-life-saver:before {
+  color: #D43636; }
+
 .content_widget {
   border: 1px solid #ddd;
   padding: 10px;

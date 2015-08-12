@@ -8,6 +8,7 @@ $darkgray: #393939;
 $lightgray: #ccc;
 $gray:#4e4e4e;
 $medgray:#777;
+$maroon: #D43636;
 $green:rgb(17, 210, 17);
 
 .highlight{
@@ -455,6 +456,7 @@ li.pagecontrol span,li.pagecontrol:hover span{
   margin-top: 0;
 }
 
+i.fa-life-saver:before{color:$maroon;}
 
 .content_widget{
   .widgettitle{
