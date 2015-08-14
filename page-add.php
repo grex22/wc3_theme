@@ -8,7 +8,7 @@
           <?php include('inc/leftnav.php'); ?>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Add Page<a href="#" data-toggle="modal" data-target="#helpmodal" class="pull-right tooltipme" data-placement="left" title="Help!"><i class="fa fa-life-saver"></i></a></h1>
+          <h1 class="page-header">Add Page<a href="#" data-toggle="modal" data-target="#helpmodal" class="pull-right tooltipme" data-placement="left" title="Help!"><i id="help-button" class="fa fa-life-saver"></i></a></h1>
 
           <div class="row">
             <div class="col-xs-12">
@@ -70,9 +70,7 @@
                 <li><a href="#tab2" data-toggle="tab">SEO</a></li>
                 <li><a href="#tab3" data-toggle="tab">Social</a></li>
                 <li><a href="#tab4" data-toggle="tab">Scheduling</a></li>
-                <li><a href="#tab5" data-toggle="tab">Scripts</a></li>
-                <li><a href="#tab6" data-toggle="tab">Permissions</a></li>
-                <li><a href="#tab7" data-toggle="tab">URL &amp; Redirects</a></li>
+                <li><a href="#tab7" data-toggle="tab">Advanced</a></li>
               </ul>
               <div class="tab-content">
                 
@@ -257,28 +255,30 @@
                     
                   </form>
                 </div>
-                <div class="tab-pane padded" id="tab5">
-                  <label>Custom Javascript for this Page</label>
-                  <textarea class="form-control" rows="6"></textarea>
-                </div>
-                <div class="tab-pane padded" id="tab6">
-                  <label>Allow the following user types to access this page:</label>
-                  <form>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" value="option1" checked> Public
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox2" value="option2" checked> Registered User
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="option3" checked> Site Administrator
-                    </label>
-                  </form>
-                </div>
                 <div class="tab-pane padded" id="tab7">
                   <div class="row">
+                    
                     <div class="col-md-9">
-                      <p>Advanced URL redirection settings, for experts only!</p>
+                      <h4>Javascript</h4>
+                      <label>Custom Javascript for this Page</label>
+                      <textarea class="form-control" rows="6"></textarea>
+                      <hr>
+                      <h4>Permissions</h4>
+                      <label>Allow the following user types to access this page:</label>
+                      <form>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox1" value="option1" checked> Public
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox2" value="option2" checked> Registered User
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox3" value="option3" checked> Site Administrator
+                        </label>
+                      </form>
+                      <hr>
+                      <h4>URLs and Redirects</h4>
+                      <label>Advanced URL redirection settings, for experts only!</label>
                       <hr>
                       <form class="form-horizontal">
                         <div class="form-group">

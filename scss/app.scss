@@ -10,6 +10,7 @@ $gray:#4e4e4e;
 $medgray:#777;
 $maroon: #D43636;
 $green:rgb(17, 210, 17);
+$darkgold:#e2a701;
 
 .highlight{
   color:$gold!important;
@@ -18,7 +19,13 @@ $green:rgb(17, 210, 17);
   color:$lightgray!important;
 }
 .warning{
-  color:rgb(207, 0, 0)!important;
+  color:$darkgold!important;
+}
+.error{
+  color:$maroon!important;
+}
+.success{
+  color:$green!important;
 }
 
 .list-inline.dividers{
@@ -45,10 +52,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1,h2,h3{
+h1,h2,h3,h4{
   color:darken($gold,5);
 }
-h4,h5,h6{
+h5,h6{
   color:$darkgray;
 }
 h3,h4,h5,h6{
@@ -70,6 +77,10 @@ h3,h4,h5,h6{
   &:hover{
     background:lighten($gold,5);
   }
+}
+.btn-light{
+  background:white;
+  border:1px solid $lightgray;
 }
 
 .btn-icon{
@@ -443,7 +454,18 @@ li.pagecontrol span,li.pagecontrol:hover span{
 /*
  * Main content
  */
-
+ 
+td.table-action{
+  font-size:15px;
+  a{
+    &:hover{text-decoration:none;}
+  }
+}
+.stat-group{
+  margin-right:20px;
+  color:$blue;
+  .well-sm{padding:7px;margin-right:8px;}
+}
 .main {
   padding: 20px;
 }
@@ -457,7 +479,7 @@ li.pagecontrol span,li.pagecontrol:hover span{
   margin-top: 0;
 }
 
-i.fa-life-saver:before{color:$maroon;}
+#help-button:before{color:$maroon;}
 
 .content_widget{
   .widgettitle{
@@ -517,6 +539,9 @@ i.fa-life-saver:before{color:$maroon;}
 }
 
 /* Utilities */
+.more_bottom_margin{
+  margin-bottom:30px;
+}
 .modal-wide{
   .modal-dialog{
     width:860px
@@ -545,7 +570,7 @@ td.checkcolumn{
   width:20px;
 }
 .tinyinput{
-  width: 30px;
+  width: 30px!important;
   display: inline-block;
   padding: 1px 7px;
   height: auto;

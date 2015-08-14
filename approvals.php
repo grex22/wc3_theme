@@ -8,7 +8,7 @@
           <?php include('inc/leftnav.php'); ?>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Approvals <a href="#" data-toggle="modal" data-target="#helpmodal" class="pull-right tooltipme" data-placement="left" title="Help!"><i class="fa fa-life-saver"></i></a></h1>
+          <h1 class="page-header">Approvals <a href="#" data-toggle="modal" data-target="#helpmodal" class="pull-right tooltipme" data-placement="left" title="Help!"><i id="help-button" class="fa fa-life-saver"></i></a></h1>
          
           <div class="row">
             
@@ -26,32 +26,9 @@
                       <div class="panel-heading">
                         
                         <div class="panel-header">
-                          <h4>Page Approvals &rsaquo;
-                            <div class="relative inline">
-                              <a href="#" class="dropdown-toggle inline-toggler" data-toggle="dropdown">Approval Pending <span class="caret"></span></a>
-                              <ul class="dropdown-menu" role="menu">
-                                <li class="active"><a href="#">Approval Pending</a></li>
-                                <li><a href="#">In Progress</a></li>
-                                <li><a href="#">Approved</a></li>
-                                <li><a href="#">Rejected</a></li>
-                              </ul>
-                            </div>
-                          </h4>
+                          <h4>Page Approvals </h4>
                         </div>
-                        <div class="form-inline">
-                          <select class="form-control input-sm">
-                            <option value="0">Bulk Actions...</option>
-                            <optgroup label="With Selected...">
-                              <option value="0">Approve Selected</option>
-                              <option value="0">Reject Selected</option>
-                            </optgroup>
-                            <optgroup label="With All...">
-                              <option value="0">Approve All</option>
-                              <option value="0">Reject All</option>
-                            </optgroup>
-                          </select>
-                          <button class="btn btn-sm">Apply</button>
-                        </div>
+                        <?php include('inc/_approvals-filters.php'); ?>
                         
                       </div>
 
@@ -60,15 +37,15 @@
                           <thead>
                             <tr>
                               <th><a href="" class="tooltipme" title="Select All"><input type="checkbox"></a></th>
-                              <th>Page</th>
-                              <th>Site</th>
-                              <th>Modified</th>
+                              <th class="sortable">Page</th>
+                              <th class="sortable">Site</th>
+                              <th class="sortable">Modified</th>
                               <th>Change</th>
                               <th>Quick Actions</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <?php for($i = 1; $i < 8; $i++): ?>
+                            <?php for($i = 1; $i < 11; $i++): ?>
                             <tr>
                               <td class="checkcolumn"><input type="checkbox"></td>
                               <td><a href="#" class="tooltipme" title="Preview Change"><b>About Us</b> <i class="row-hover-show fa fa-search"></i></a></td>
@@ -88,32 +65,9 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="panel-header">
-                        <h4>Widget Approvals &rsaquo;
-                          <div class="relative inline">
-                            <a href="#" class="dropdown-toggle inline-toggler" data-toggle="dropdown">Approval Pending <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                              <li class="active"><a href="#">Approval Pending</a></li>
-                              <li><a href="#">In Progress</a></li>
-                              <li><a href="#">Approved</a></li>
-                              <li><a href="#">Rejected</a></li>
-                            </ul>
-                          </div>
-                        </h4>
+                        <h4>Widget Approvals                      </h4>
                       </div>
-                      <div class="form-inline">
-                        <select class="form-control input-sm">
-                          <option value="0">Bulk Actions...</option>
-                          <optgroup label="With Selected...">
-                            <option value="0">Approve Selected</option>
-                            <option value="0">Reject Selected</option>
-                          </optgroup>
-                          <optgroup label="With All...">
-                            <option value="0">Approve All</option>
-                            <option value="0">Reject All</option>
-                          </optgroup>
-                        </select>
-                        <button class="btn btn-sm">Apply</button>
-                      </div>
+                      <?php include('inc/_approvals-filters.php'); ?>
                     </div>
                     
                     <div class="table-responsive">
@@ -121,8 +75,8 @@
                         <thead>
                           <tr>
                             <th><a href="" class="tooltipme" title="Select All"><input type="checkbox"></a></th>
-                            <th>Widget</th>
-                            <th>Modified</th>
+                            <th class="sortable">Widget</th>
+                            <th class="sortable">Modified</th>
                             <th>Change</th>
                             <th>Quick Actions</th>
                           </tr>
@@ -151,32 +105,9 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <div class="panel-header">
-                      <h4>File Manager Approvals &rsaquo;
-                        <div class="relative inline">
-                          <a href="#" class="dropdown-toggle inline-toggler" data-toggle="dropdown">Approval Pending <span class="caret"></span></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li class="active"><a href="#">Approval Pending</a></li>
-                            <li><a href="#">In Progress</a></li>
-                            <li><a href="#">Approved</a></li>
-                            <li><a href="#">Rejected</a></li>
-                          </ul>
-                        </div>
-                      </h4>
+                      <h4>File Manager Approvals</h4>
                     </div>
-                    <div class="form-inline">
-                        <select class="form-control input-sm">
-                          <option value="0">Bulk Actions...</option>
-                          <optgroup label="With Selected...">
-                            <option value="0">Approve Selected</option>
-                            <option value="0">Reject Selected</option>
-                          </optgroup>
-                          <optgroup label="With All...">
-                            <option value="0">Approve All</option>
-                            <option value="0">Reject All</option>
-                          </optgroup>
-                        </select>
-                        <button class="btn btn-sm">Apply</button>
-                      </div>
+                    <?php include('inc/_approvals-filters.php'); ?>
                     
                   </div>
                  
@@ -185,8 +116,8 @@
                       <thead>
                         <tr>
                           <th><a href="" class="tooltipme" title="Select All"><input type="checkbox"></a></th>
-                          <th>Filename</th>
-                          <th>Modified</th>
+                          <th class="sortable">Filename</th>
+                          <th class="sortable">Modified</th>
                           <th>Change</th>
                           <th>Quick Actions</th>
                         </tr>
@@ -213,32 +144,9 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <div class="panel-header">  
-                      <h4>Product Catalog Approvals &rsaquo;
-                        <div class="relative inline">
-                          <a href="#" class="dropdown-toggle inline-toggler" data-toggle="dropdown">Approval Pending <span class="caret"></span></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li class="active"><a href="#">Approval Pending</a></li>
-                            <li><a href="#">In Progress</a></li>
-                            <li><a href="#">Approved</a></li>
-                            <li><a href="#">Rejected</a></li>
-                          </ul>
-                        </div>
-                      </h4>
+                      <h4>Product Catalog</h4>
                     </div>
-                    <div class="form-inline">
-                        <select class="form-control input-sm">
-                          <option value="0">Bulk Actions...</option>
-                          <optgroup label="With Selected...">
-                            <option value="0">Approve Selected</option>
-                            <option value="0">Reject Selected</option>
-                          </optgroup>
-                          <optgroup label="With All...">
-                            <option value="0">Approve All</option>
-                            <option value="0">Reject All</option>
-                          </optgroup>
-                        </select>
-                        <button class="btn btn-sm">Apply</button>
-                      </div>
+                    <?php include('inc/_approvals-filters.php'); ?>
                     
                   </div>
                   
@@ -247,9 +155,9 @@
                       <thead>
                         <tr>
                           <th><a href="" class="tooltipme" title="Select All"><input type="checkbox"></a></th>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Modified</th>
+                          <th class="sortable">Name</th>
+                          <th class="sortable">Type</th>
+                          <th class="sortable">Modified</th>
                           <th>Change</th>
                           <th>Quick Actions</th>
                         </tr>

@@ -8,7 +8,7 @@
           <?php include('inc/leftnav.php'); ?>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard <a data-toggle="modal" data-target="#helpmodal" href="#" class="pull-right tooltipme" data-placement="left" title="Help!"><i class="fa fa-life-saver"></i></a></h1>
+          <h1 class="page-header">Dashboard <a data-toggle="modal" data-target="#helpmodal" href="#" class="pull-right tooltipme" data-placement="left" title="Help!"><i id="help-button" class="fa fa-life-saver"></i></a></h1>
           
           <div class="stickywrapper">
             <div class="stickytabs">

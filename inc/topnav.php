@@ -25,7 +25,7 @@
             </li>
             <li><a href="#"><i class="fa fa-folder-open"></i> Media</a></li>
             <li><a href="#"><i class="fa fa-asterisk"></i> Widgets</a></li>
-            <li><a href="#"><i class="fa fa-check-square-o"></i> <span class="notice_num">12</span> Notices</a></li>
+            <li><a href="#"><i class="fa fa-check-square-o"></i> <span class="notice_num">12</span> Approvals</a></li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right stripe-nav">

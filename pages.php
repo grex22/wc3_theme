@@ -8,12 +8,20 @@
           <?php include('inc/leftnav.php'); ?>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Pages<a href="#" data-toggle="modal" data-target="#helpmodal" class="pull-right tooltipme" data-placement="left" title="Help!"><i class="fa fa-life-saver"></i></a></h1>
+          <h1 class="page-header">Pages<a href="#" data-toggle="modal" data-target="#helpmodal" class="pull-right tooltipme" data-placement="left" title="Help!"><i id="help-button" class="fa fa-life-saver"></i></a></h1>
           <div class="row">
             <div class="col-xs-9">
               <div class="btn-group">
-                <a href="#" class="btn"><i class="fa fa-plus"></i> Add New Page</a>
-                <a href="#" class="btn" data-toggle="modal" data-target="#demo-modal"><i class="fa fa-upload"></i> Batch Upload</a>
+                  <button type="button" class="btn "><i class="fa fa-plus"></i> Add New Page</button>
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Add Subpage</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#"><i class="fa fa-upload"></i> Batch Upload</a></li>
+                  </ul>
               </div>
               <div class="btn-group">
                 <a class="btn" href="#reorder_modal" data-toggle="modal"><i class="fa fa-bars"></i> Reorder Menus</a>
@@ -50,7 +58,34 @@
                   <div class="panel-header">
                   <h4>Site Pages for livepainfreenow.com <a href="http://livepainfreenow.com" target="_blank"><i class="fa fa-external-link-square"></i></a></h4>
                   </div>
-                  <div class="pull-right"><ul class="pagination-sm pagination no_margin">
+                  
+                  <div class="form-inline row">
+                    <div class="form-group col-sm-3">
+                    <select class="form-control input-sm">
+                      <option value="0">Bulk Actions...</option>
+                      <option value="0">Bulk Edit</option>
+                      <option value="0">Preview Selected</option>
+                    </select>
+                    <button class="btn btn-sm">Apply</button>
+                    </div>
+                    <div class="form-group col-sm-7 text-right">
+                      Filters
+                      <select class="form-control input-sm">
+                        <option value="0">All Approvals</option>
+                        <option value="0">Pending Approval</option>
+                        <option value="0">Approved</option>
+                        <option value="0">Rejected</option>
+                      </select>
+                      <select class="form-control input-sm">
+                        <option value="0">All Page Types</option>
+                        <option value="0">Sub Pages Only</option>
+                        <option value="0">Menu Pages Only</option>
+                      </select>
+                       
+                      <button class="btn btn-sm">Filter</button>
+                    </div>
+                    <div class="form-group col-sm-2 text-right">
+                    <ul class="pagination-sm pagination no_margin">
                       <li>
                         <a href="#" aria-label="Previous">
                           <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
@@ -64,20 +99,8 @@
                           <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
                         </a>
                       </li>
-                    </ul></div>
-                  <div class="form-inline">
-                    <select class="form-control input-sm">
-                      <option value="0">Bulk Actions...</option>
-                      <optgroup label="With Selected...">
-                        <option value="0">Approve Selected</option>
-                        <option value="0">Reject Selected</option>
-                      </optgroup>
-                      <optgroup label="With All...">
-                        <option value="0">Approve All</option>
-                        <option value="0">Reject All</option>
-                      </optgroup>
-                    </select>
-                    <button class="btn btn-sm">Apply</button>
+                    </ul>
+                    </div>
                   </div>
                 </div>
                                
@@ -90,6 +113,7 @@
                         <th>Location</th>
                         <th class="sortable">Template</th>
                         <th class="sortable">Last Modified</th>
+                        <th class="sortable">Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -106,9 +130,8 @@
                           <small>
                             <ul class="list-unstyled list-inline dividers">
                               <li><a href="#">Edit</a></li>
-                              <li><a href="#">View</a></li>
-                              <li><a href="#">Add Subpage</a></li>
-                              <li><a href="#" class="warning">Delete</a></li>
+                              <li><a href="#">Preview</a></li>
+                              <li><a href="#">Widgets (3)</a></li>
                             </ul>
                           </small>
                         </td>
@@ -128,6 +151,7 @@
                         <td>3/31/15 3:15pm<br>
                           <small>by: Greg Burkett</small>
                         </td>
+                        <td>Published</td>
                       </tr>
                       <?php endfor; ?>
 
