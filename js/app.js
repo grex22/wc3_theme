@@ -52,6 +52,17 @@ $(document).ready(function(){
     );
   });
   
+  //simulate auto-aliasing
+  $("#pageparent").change(function(){
+    var alias = $(this).val();
+    $("#parent_alias").html(alias);
+  });
+  
+  $(".btn-group-toggle .btn").click(function(e){
+    $(this).addClass('active').siblings('.btn').removeClass('active');
+  });
+  
+  
   $(".table-selectable td").click(function(e){
     e.preventDefault();
     $("#widgetconfirm").addClass('btn-primary');

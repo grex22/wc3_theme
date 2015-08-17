@@ -111,7 +111,7 @@
                         <th><a href="#" title="Select All" class="tooltipme"><input type="checkbox"></a></th>
                         <th class="sortable">Page</th>
                         <th>Location</th>
-                        <th class="sortable">Template</th>
+                        <th class="sortable">Layout</th>
                         <th class="sortable">Last Modified</th>
                         <th class="sortable">Status</th>
                       </tr>
@@ -147,7 +147,7 @@
                             <?php endif; ?>
                           </ul>
                         </td>
-                        <td>Default Template</td>
+                        <td>Default Layout</td>
                         <td>3/31/15 3:15pm<br>
                           <small>by: Greg Burkett</small>
                         </td>

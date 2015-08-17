@@ -20,9 +20,21 @@
                         <input class="form-control input-lg" type="text" id="pagetitle">
                       </div>
                       <div class="form-group">
+                        <label>Parent Page</label>
+                        <select class="form-control input-sm" id="pageparent">
+                          <option value="/">Top-Level Page (No Parent)</option>
+                          <option value="about-us/">About Us</option>
+                          <option value="about-us/our-location/">Our Location</option>
+                          <option value="contact-us/">Contact Us</option>
+                          <option value="our-process/">Our Process</option>
+                          <option value="staff/">Staff</option>
+                          <option value="staff/doctor-bio/">Doctor Bio</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
                         <label>Page URL Alias</label>
                         <div class="input-group">
-                        <div class="input-group-addon prepend">/</div>
+                        <div class="input-group-addon prepend" id="parent_alias">/</div>
                         <input class="form-control input-sm" type="text" id="pagetitle_slug">
                         </div>
                       </div>
@@ -43,10 +55,10 @@
                         <div class="col-md-6">
                           <label>When Clicked:</label><br>
                           <label class="radio-inline">
-                            <input type="radio" id="inlineCheckbox1" value="option1" checked> Normal
+                            <input type="radio" name="menu_click_behavior" id="inlineCheckbox1" value="option1" checked> Normal
                           </label>
                           <label class="radio-inline">
-                            <input type="radio" id="inlineCheckbox2" value="option2"> Open in new tab / window
+                            <input type="radio" name="menu_click_behavior" id="inlineCheckbox2" value="option2"> Open in new tab / window
                           </label>
                         </div>
                       </div>
@@ -79,9 +91,9 @@
                     <div class="panel-heading">
 
                       <form class="form-inline">
-                      <label>Template
+                      <label>Layout
                         <select class="form-control">
-                          <option>Default Template</option>
+                          <option>Default Layout</option>
                         </select>
                       </label>
                       </form>
@@ -318,12 +330,7 @@
               <br>
               <br>
               <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
+
               <br>
               <br>
               <br>
@@ -344,53 +351,113 @@
                 <h4 class="modal-title step-2" data-step="1">Add from Widget Library &rsaquo; Content</h4>
               </div>
               <div class="modal-body step step-1">
-                <h5>Widget Categories:</h5>
-                <div class="row widgetgrid">
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-list"></i>Content</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-server"></i>Forms</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-file"></i>Files</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-wrench"></i>Complex Content</a></div>
+                <div class="btn-group btn-group-toggle">
+                  <a class="btn btn-default btn-sm active" href="#tab_widget_grid" data-toggle="tab"><i class="fa fa-th-large"></i> Categories</a>
+                  <a class="btn btn-default btn-sm" href="#tab_widget_list" data-toggle="tab"><i class="fa fa-list"></i> List</a>
+                  <a class="btn btn-default btn-sm" href="#tab_widget_recent" data-toggle="tab"><i class="fa fa-clock-o"></i> Recent</a>
                 </div>
-                <div class="row widgetgrid">
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-table"></i>Data</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-suitcase"></i>Project</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-subway"></i>Other</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-tablet"></i>Mobile</a></div>
+                <hr>
+                <div class="tab-content">
+                  <div class="tab-pane active " id="tab_widget_grid">
+                    
+                    <div class="row widgetgrid">
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-list"></i>Content</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-server"></i>Forms</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-file"></i>Files</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-wrench"></i>Complex Content</a></div>
+                    </div>
+                    <div class="row widgetgrid">
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-table"></i>Data</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-suitcase"></i>Project</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-subway"></i>Other</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-tablet"></i>Mobile</a></div>
+                    </div>
+                    <div class="row widgetgrid">
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-star"></i>Ratings</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-server"></i>Forms</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-file"></i>Files</a></div>
+                      <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-wrench"></i>Complex Content</a></div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="tab_widget_list">
+                    
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <div style="max-height:300px;overflow-y:scroll;margin-top:10px;">
+                      <table class="table table-responsive table-condensed table-selectable">
+                        <thead>
+                          <tr><th class="sortable">Widget Title</th><th class="sortable">Type</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="gotostep(2)"><td>New Content Widget</td><td>Content</td></tr>
+                            <tr onclick="gotostep(2)"><td>Content Widget 1</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>Content Widget 1</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>Content Widget 2</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>Content Widget 2</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>About us</td><td>Content</td>              </tr>
+                            <tr onclick="gotostep(2)"><td>About us</td><td>Content</td>              </tr>
+                            <tr onclick="gotostep(2)"><td>About us Revised</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>About us Revised</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>2015 Event List</td><td>Calendar</td>       </tr>
+                            <tr onclick="gotostep(2)"><td>2015 Event List</td><td>Calendar</td>       </tr>
+                            <tr onclick="gotostep(2)"><td>About the Practice</td><td>Map</td>    </tr>
+                            <tr onclick="gotostep(2)"><td>About the Practice</td><td>Map</td>    </tr>
+                            <tr onclick="gotostep(2)"><td>Dr. Delonghe</td><td>Map</td>          </tr>
+                            <tr onclick="gotostep(2)"><td>Dr. Delonghe</td><td>Map</td>          </tr>
+                            <tr onclick="gotostep(2)"><td>Dr. Tranton</td><td>Form</td>           </tr>
+                            <tr onclick="gotostep(2)"><td>Dr. Tranton</td><td>Form</td>           </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane " id="tab_widget_recent">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <div style="max-height:300px;overflow-y:scroll;margin-top:10px;">
+                      <table class="table table-responsive table-condensed table-selectable">
+                        <thead>
+                          <tr><th class="sortable">Widget Title</th><th class="sortable">Type</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="gotostep(2)"><td>New Content Widget</td><td>Content</td></tr>
+                            <tr onclick="gotostep(2)"><td>Content Widget 1</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>Content Widget 1</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>Content Widget 2</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>Content Widget 2</td><td>Content</td>      </tr>
+                            <tr onclick="gotostep(2)"><td>Dr. Tranton</td><td>Form</td>           </tr>
+                            <tr onclick="gotostep(2)"><td>Dr. Tranton</td><td>Form</td>           </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
-                <div class="row widgetgrid">
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-star"></i>Ratings</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-server"></i>Forms</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-file"></i>Files</a></div>
-                  <div class="col-xs-3"><a href="#" onclick="gotostep(2)" class="widgetcat"><i class="fa fa-lg fa-wrench"></i>Complex Content</a></div>
-                </div>
-                
+                                
               </div>
               <div class="modal-body step step-2">
-                <div style="max-height:300px;overflow-y:scroll">
+                <input type="text" class="form-control" placeholder="Search...">
+                <div style="max-height:300px;overflow-y:scroll;margin-top:10px;">
                   <table class="table table-responsive table-condensed table-selectable">
                     <thead>
-                      <tr><th>Title</th></tr>
+                      <tr><th class="sortable">Widget Title</th><th class="sortable">Type</th></tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>New Content Widget</td>
+                        <td>New Content Widget</td><td>Content</td>
                       </tr>
-                        <tr><td>Content Widget 1</td>      </tr>
-                        <tr><td>Content Widget 1</td>      </tr>
-                        <tr><td>Content Widget 2</td>      </tr>
-                        <tr><td>Content Widget 2</td>      </tr>
-                        <tr><td>About us</td>              </tr>
-                        <tr><td>About us</td>              </tr>
-                        <tr><td>About us Revised</td>      </tr>
-                        <tr><td>About us Revised</td>      </tr>
-                        <tr><td>2015 Event List</td>       </tr>
-                        <tr><td>2015 Event List</td>       </tr>
-                        <tr><td>About the Practice</td>    </tr>
-                        <tr><td>About the Practice</td>    </tr>
-                        <tr><td>Dr. Delonghe</td>          </tr>
-                        <tr><td>Dr. Delonghe</td>          </tr>
-                        <tr><td>Dr. Tranton</td>           </tr>
-                        <tr><td>Dr. Tranton</td>           </tr>
+                        <tr><td>Content Widget 1</td><td>Content</td>      </tr>
+                        <tr><td>Content Widget 1</td><td>Content</td>      </tr>
+                        <tr><td>Content Widget 2</td><td>Content</td>      </tr>
+                        <tr><td>Content Widget 2</td><td>Content</td>      </tr>
+                        <tr><td>About us</td><td>Content</td>              </tr>
+                        <tr><td>About us</td><td>Content</td>              </tr>
+                        <tr><td>About us Revised</td><td>Content</td>      </tr>
+                        <tr><td>About us Revised</td><td>Content</td>      </tr>
+                        <tr><td>2015 Event List</td><td>Calendar</td>       </tr>
+                        <tr><td>2015 Event List</td><td>Calendar</td>       </tr>
+                        <tr><td>About the Practice</td><td>Map</td>    </tr>
+                        <tr><td>About the Practice</td><td>Map</td>    </tr>
+                        <tr><td>Dr. Delonghe</td><td>Map</td>          </tr>
+                        <tr><td>Dr. Delonghe</td><td>Map</td>          </tr>
+                        <tr><td>Dr. Tranton</td><td>Form</td>           </tr>
+                        <tr><td>Dr. Tranton</td><td>Form</td>           </tr>
                     </tbody>
                   </table>
                 </div>
