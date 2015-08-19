@@ -12,14 +12,12 @@
           <div class="row">
             <div class="col-xs-9">
               <div class="btn-group">
-                  <button type="button" class="btn "><i class="fa fa-plus"></i> Add New Page</button>
+                  <a class="btn" href="#"><i class="fa fa-plus"></i> Add New Page</a>
                   <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Add Subpage</a></li>
-                    <li role="separator" class="divider"></li>
                     <li><a href="#"><i class="fa fa-upload"></i> Batch Upload</a></li>
                   </ul>
               </div>
@@ -56,6 +54,23 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <div class="panel-header">
+                    <div class="form-group pagination-wrapper pull-right text-right">
+                      <ul class="pagination-sm pagination no_margin">
+                        <li>
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+                          </a>
+                        </li>
+                        <li class="pagecontrol">
+                          <span><input class="form-control input-sm tinyinput" type="text" value="1"> of 2</span>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   <h4>Site Pages for livepainfreenow.com <a href="http://livepainfreenow.com" target="_blank"><i class="fa fa-external-link-square"></i></a></h4>
                   </div>
                   
@@ -68,7 +83,7 @@
                     </select>
                     <button class="btn btn-sm">Apply</button>
                     </div>
-                    <div class="form-group col-sm-7 text-right">
+                    <div class="form-group col-sm-9 text-right">
                       Filters
                       <select class="form-control input-sm">
                         <option value="0">All Approvals</option>
@@ -84,23 +99,7 @@
                        
                       <button class="btn btn-sm">Filter</button>
                     </div>
-                    <div class="form-group col-sm-2 text-right">
-                    <ul class="pagination-sm pagination no_margin">
-                      <li>
-                        <a href="#" aria-label="Previous">
-                          <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
-                        </a>
-                      </li>
-                      <li class="pagecontrol">
-                        <span><input class="form-control input-sm tinyinput" type="text" value="1"> of 2</span>
-                      </li>
-                      <li>
-                        <a href="#" aria-label="Next">
-                          <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
-                        </a>
-                      </li>
-                    </ul>
-                    </div>
+                    
                   </div>
                 </div>
                                
@@ -200,6 +199,29 @@
                   <div class="clearfix"></div>
                 </div>
                 -->
+                <div class="panel-footer">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group pagination-wrapper pull-right text-right">
+                        Pages <ul class="pagination-sm pagination no_margin">
+                          <li>
+                            <a href="#" aria-label="Previous">
+                              <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+                            </a>
+                          </li>
+                          <li class="pagecontrol">
+                            <span><input class="form-control input-sm tinyinput" type="text" value="1"> of 2</span>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Next">
+                              <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               
               

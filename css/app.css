@@ -315,6 +315,11 @@ hr {
   padding-bottom: 3px;
   margin-bottom: 7px;
   border-bottom: 1px solid #E1E1E1; }
+  .panel-header .pagination-wrapper {
+    margin: -8px 0 0; }
+
+.panel-footer .pagination-wrapper {
+  margin: 0px 0 0; }
 
 .panel-heading.condensed {
   padding: 4px 15px; }
@@ -417,7 +422,8 @@ td.table-action {
   margin-bottom: 30px; }
 
 .modal-wide .modal-dialog {
-  width: 860px; }
+  width: 100%;
+  max-width: 860px; }
 
 .padded {
   padding: 15px; }
