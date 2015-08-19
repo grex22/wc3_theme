@@ -135,14 +135,91 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title">Create New Widget</h4>
           </div>
-          <div class="modal-body">
-            <p>Pending... Create Modal Process</p>
+          <div class="modal-body flush">
+            <div class="row">      
+              <div class="col-xs-4 left-tabs-tabs">
+                <h5>Categories</h5>
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#contentmgmt" data-toggle="pill"><i class="fa fa-lg fa-file-text-o"></i> Content Management</a></li>
+                  <li><a href="#contact" data-toggle="pill"><i class="fa fa-lg fa-server"></i> Contact Services</a></li>
+                  <li><a href="#visitor" data-toggle="pill"><i class="fa fa-lg fa-users"></i> Visitor Interaction</a></li>
+                  <li><a href="#media" data-toggle="pill"><i class="fa fa-lg fa-image"></i> Media</a></li>
+                  <li><a href="#location" data-toggle="pill"><i class="fa fa-lg fa-location-arrow"></i> Location Services</a></li>
+                </ul>
+
+              </div>
+              <div class="col-xs-8 left-tabs-content">
+                
+                <div class="tab-content">
+                  <div class="tab-pane active" id="contentmgmt">
+                    <h4>Content Management Widgets</h4>
+                    <table class="table table-responsive table-selectable">
+                      <tbody>
+                        <tr><td>Content Widget</td></tr>
+                        <tr><td>Blog Widget</td></tr>
+                        <tr><td>Sitemap Widget</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane" id="contact">
+                    <h4>Contact Services Widgets</h4>
+                    <table class="table table-responsive table-selectable">
+                      <tbody>
+                        <tr><td>Contact Information</td></tr>
+                        <tr><td>Google Map</td></tr>
+                        <tr><td>Email Us</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane" id="visitor">
+                    <h4>Visitor Interaction Widgets</h4>
+                    <table class="table table-responsive table-selectable">
+                      <tbody>
+                        <tr><td>Contact Form</td></tr>
+                        <tr><td>Survey</td></tr>
+                        <tr><td>Terms of Service</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane" id="media"> 
+                    <h4>Media Widgets</h4>
+                    <table class="table table-responsive table-selectable">
+                      <tbody>
+                        <tr><td>Image</td></tr>
+                        <tr><td>Animated Slideshow</td></tr>
+                        <tr><td>Youtube Embed</td></tr>
+                        <tr><td>Vimeo Embed</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane" id="location">
+                    <h4>Location Services Widgets</h4>
+                    <table class="table table-responsive table-selectable">
+                      <tbody>
+                        <tr><td>Nearest Location</td></tr>
+                        <tr><td>Location Services Opt-in</td></tr>
+                        <tr><td>ZIP Code</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn pull-left btn-default" data-dismiss="modal">Cancel</button>
+            <a href="widget-add.php" id="widgetconfirm" class="btn btn-primary disabled">Create New Widget</a>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+    
+    
+   
+    
+    
+    
+    
+    
+    
 <?php include('inc/footer.php'); ?>

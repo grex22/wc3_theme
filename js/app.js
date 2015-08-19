@@ -65,7 +65,7 @@ $(document).ready(function(){
   
   $(".table-selectable td").click(function(e){
     e.preventDefault();
-    $("#widgetconfirm").addClass('btn-primary');
+    $("#widgetconfirm").removeClass('disabled').addClass('btn-primary');
     $(this).parent("tr").siblings('tr').removeClass('info');
     $(this).addClass('info');
   });
